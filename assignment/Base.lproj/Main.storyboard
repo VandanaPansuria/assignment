@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,86 +16,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cUX-Hm-dMm"/>
+                        <segue destination="BZH-eC-ygX" kind="relationship" relationship="rootViewController" id="D8h-nb-HiZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Sl-bO-p46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1106" y="82"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="assignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="auv-U7-pjl">
-                                <rect key="frame" x="0.0" y="219" width="414" height="370"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3t-wZ-BLF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="4U6-he-VKL"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Page 1">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btnPagesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUl-CX-eVA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-iZ-OEE">
-                                        <rect key="frame" x="0.0" y="125" width="414" height="120"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Page 2">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btnPagesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGj-1r-90s"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0y-S9-jLW">
-                                        <rect key="frame" x="0.0" y="250" width="414" height="120"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Page 3">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btnPagesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFv-Xz-GX3"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Zxk-iZ-OEE" firstAttribute="height" secondItem="p3t-wZ-BLF" secondAttribute="height" id="8r3-AJ-cRP"/>
-                                    <constraint firstItem="k0y-S9-jLW" firstAttribute="height" secondItem="p3t-wZ-BLF" secondAttribute="height" id="TEg-99-9Mg"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="auv-U7-pjl" secondAttribute="trailing" id="6gI-wv-bfN"/>
-                            <constraint firstItem="auv-U7-pjl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YJ1-e8-wex"/>
-                            <constraint firstItem="auv-U7-pjl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hBX-iG-EEq"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="LXw-it-R5u"/>
-                    <connections>
-                        <segue destination="BZH-eC-ygX" kind="show" identifier="pages" id="hGZ-VO-P62"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-297" y="82"/>
         </scene>
         <!--Comedy-->
         <scene sceneID="Mzg-Jc-mVq">
@@ -172,15 +97,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sM-rf-m0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402.89855072463769" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-145" y="82"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nav_bar" width="1080" height="168"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

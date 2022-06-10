@@ -1,12 +1,12 @@
 //
-//  HomeModel.swift
+//  ContentListingModel.swift
 //  assignment
 //
 //  Created by MacV on 06/06/22.
 //
 
 import Foundation
-struct HomeModel: Codable {
+struct ContentListingModel: Codable {
     let page: pageModel
 }
 struct pageModel : Codable{

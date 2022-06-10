@@ -1,5 +1,5 @@
 //
-//  HomeVM.swift
+//  ContentListingVM.swift
 //  assignment
 //
 //  Created by MacV on 06/06/22.
@@ -7,31 +7,32 @@
 
 import Foundation
 import UIKit
-class HomeVM{
+class ContentListingVM{
     internal var comedyList: [contentModel] = []
     internal var filteredList: Dynamic<[contentModel]> = Dynamic([])
     internal var pageTitle : String = ""
-     func readLocalFile(forName name: String) -> Data? {
+    func readLocalFile(forName name: String,completion: @escaping (([contentModel])) -> ()) {
         do {
             if let bundlePath = Bundle.main.path(forResource: name,
                                                  ofType: "json"),
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                let parseData = try JSONDecoder().decode(HomeModel.self,
+                let parseData = try JSONDecoder().decode(ContentListingModel.self,
                                                            from: jsonData)
                 pageTitle = parseData.page.title
-                comedyList = parseData.page.ContentItems.content
-                self.filteredList.value = comedyList
-                return jsonData
+                comedyList.append(contentsOf: parseData.page.ContentItems.content)
+                self.filteredList.value.append(contentsOf: parseData.page.ContentItems.content)
+                completion(comedyList)
+            }else{
+                completion([])
             }
         } catch {
             print(error)
         }
-        return nil
     }
 }
 
 //MARK:- search filter
-extension HomeVM {
+extension ContentListingVM {
     
     func clearSearch() {
         self.filteredList.value = comedyList
